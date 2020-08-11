@@ -76,6 +76,12 @@ public class PaymentActivity extends AppCompatActivity {
                         showResultDialog(message, code);
                         Toast.makeText(PaymentActivity.this, "Cancel", Toast.LENGTH_SHORT).show();
                     }
+
+                    @Override
+                    public void onUnKnown(String message, int code) {
+                        showResultDialog(message, code);
+                        Toast.makeText(PaymentActivity.this, "Unknown", Toast.LENGTH_SHORT).show();
+                    }
                 });
             }
 

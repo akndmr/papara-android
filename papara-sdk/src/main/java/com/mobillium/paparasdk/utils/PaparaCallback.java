@@ -7,4 +7,6 @@ public interface PaparaCallback {
     public void onFailure(String message, int code);
 
     public void onCancel(String message, int code);
+
+    public void onUnKnown(String message, int code);
 }

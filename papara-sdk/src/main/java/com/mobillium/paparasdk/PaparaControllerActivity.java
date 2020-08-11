@@ -232,6 +232,10 @@ public class PaparaControllerActivity extends AppCompatActivity {
                 Papara.getInstance().getPaparaCallback().onCancel(message, code);
                 PaparaLogger.writeInfoLog("Result: Cancel");
                 break;
+            default:
+                Papara.getInstance().getPaparaCallback().onUnKnown(message, code);
+                PaparaLogger.writeInfoLog("Result: Unknown: " + message + code);
+                break;
 
         }
         finish();
